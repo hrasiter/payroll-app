@@ -13,3 +13,7 @@ func (db *PayrollDatabase) GetEmployee(id int) *Employee {
 func (db *PayrollDatabase) AddEmployee(id int, e *Employee) {
 	db.database[id] = e
 }
+
+func (db *PayrollDatabase) DeleteEmployee(eId int) {
+	delete(db.database, eId)
+}

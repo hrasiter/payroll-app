@@ -23,3 +23,7 @@ func (e *Employee) GetSchedule() PaymentSchedule {
 func (e *Employee) GetMethod() PaymentMethod {
 	return e.Method
 }
+
+func (e *Employee) GetEmployeeId() int {
+	return e.EmployeeId
+}

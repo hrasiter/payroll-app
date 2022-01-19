@@ -20,7 +20,7 @@ func NewAddHourlyEmployeeTransaction(id int, name string, rate float32) *AddHour
 }
 
 func (t *AddHourlyEmployeeTransaction) GetClassification() PayClassification {
-	return &HourlyClassification{hourlyRate: t.hourlyRate}
+	return NewHourlyClassification(t.hourlyRate)
 }
 
 func (t *AddHourlyEmployeeTransaction) GetSchedule() PaymentSchedule {
